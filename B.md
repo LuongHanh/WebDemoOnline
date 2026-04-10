@@ -1,7 +1,7 @@
 # B. Cài đặt Ubuntu + Docker
 ## Cài đặt hệ điều hành Ubuntu 24.04.4 LTS
 ### Sử dụng một trong các công cụ để giả lập: VirutualBox (Miễn phí).
-Truy cập trang [oracle virtualbox downloads] :https://www.oracle.com/latam/virtualization/technologies/vm/downloads/virtualbox-downloads.html
+Truy cập trang [oracle virtualbox downloads](https://www.oracle.com/latam/virtualization/technologies/vm/downloads/virtualbox-downloads.html)
 Chọn bản dành cho window.
 <img width="1914" height="899" alt="image" src="https://github.com/user-attachments/assets/2c5237aa-0e7d-42ee-8036-47ff911d0a44" />
 
@@ -9,7 +9,7 @@ Tải về và cài đặt.
 
 
 ### Download file ubuntu
-Tải [ubuntu-24.04.4-live-server-amd64.iso] :https://releases.ubuntu.com/24.04.4/ubuntu-24.04.4-live-server-amd64.iso để cài đặt.
+Tải [ubuntu-24.04.4-live-server-amd64.iso](https://releases.ubuntu.com/24.04.4/ubuntu-24.04.4-live-server-amd64.iso) để cài đặt.
 
 ### Cấu hình mạng trong Ubuntu (và công cụ giả lập) để cho phép truy cập SSH vào Ubuntu từ cmd của windows
 **Cấu hình network Virtualbox**
