@@ -7,7 +7,6 @@ Chọn bản dành cho window.
 
 Tải về và cài đặt.
 
-
 ### Download file ubuntu
 Tải [ubuntu-24.04.4-live-server-amd64.iso](https://releases.ubuntu.com/24.04.4/ubuntu-24.04.4-live-server-amd64.iso) để cài đặt.
 
@@ -20,7 +19,9 @@ Sang tab Nat network, chuột phải vào khoảng trắng chọn Create, đặt
 <img width="1087" height="963" alt="image" src="https://github.com/user-attachments/assets/3a07ebbd-bf3d-4606-97b7-7bd2bb263fc8" />
 
 Xong cấu hình mạng Virtualbox.
+
 **Cấu hình network Ubuntu**
+
 *Bước 1: Trước hết cần tạo máy ảo Ubuntu.*
 
 Tạo 1 máy ảo, bấm Create a new virtual machine.
@@ -100,17 +101,47 @@ Ok. Thiết lập mạng xong!
 ## Tìm hiểu các lệnh cơ bản của ubuntu
 Các lệnh cần tìm hiểu:
 
-Liệt kê các file trong thư mục: ls
-Tạo thư mục: mkdir nameFolder
-Chuyển thư mục làm việc: cd path
-Copy file: cp file_nguồn path/file_đích
-Thay đổi quyền thao tác file: sudo chmod xxx filename
-Edit file: sudo nano tenfile
-CTRL+o : lưu nội dung sau khi edit
-CTRL+x : thoát edit file
-Xem ip của máy ubuntu: ip -4 addr
+- Liệt kê các file trong thư mục: ls
+- Tạo thư mục: mkdir nameFolder
+- Chuyển thư mục làm việc: cd path
+- Copy file: cp file_nguồn path/file_đích
+- Thay đổi quyền thao tác file: sudo chmod xxx filename
+- Edit file: sudo nano tenfile
+- CTRL+o : lưu nội dung sau khi edit
+- CTRL+x : thoát edit file
+- Xem ip của máy ubuntu: ip -4 addr
+- Bonus: Các lệnh thông dụng khác:
+    + chmod: Thay đổi quyền truy cập tệp tin/thư mục.
+    + chown: Thay đổi chủ sở hữu của tệp tin/thư mục.
+    + cat: Hiển thị nội dung tập tin.
+    + grep: Tìm kiếm một mẫu văn bản trong file.
+    + find: Tìm kiếm tệp tin hoặc thư mục dựa trên các tiêu chí
+    + nano: Trình soạn thảo văn bản trong terminal.
+    + rm: Xóa tập tin (rm file.txt).
+    + rmdir: Xóa thư mục rỗng.
+    + rm -rf: Xóa thư mục và toàn bộ nội dung bên trong (cẩn thận khi sử dụng).
 ## Cài đặt docker cho Ubuntu
+Trước hết install docker.io (-y là auto yes), chạy lần lượt:
+```
+sudo apt update
+sudo apt install docker.io -y
+```
+<img width="676" height="386" alt="install docker" src="https://github.com/user-attachments/assets/57be7a0d-0ec3-4ac7-9390-8856bab7f17c" />
+
+Tiếp theo cài docker-compose.
+<img width="672" height="385" alt="install docker compose" src="https://github.com/user-attachments/assets/be2a7238-c0bf-4420-8574-8cb3f73c6848" />
+
 Kiểm tra phiên bản docker vừa cài đặt, kiểm tra phiên bản của docker compose
+<img width="662" height="51" alt="check version" src="https://github.com/user-attachments/assets/c068306a-aaaf-4aea-9377-69b328355a91" />
+
 Cấu hình để docker chạy mà không cần tiền tố sudo
+
+Chạy lệnh `sudo usermod -aG docker $USER` sau đó SSH lại, chạy thử lệnh không sudo `docker ps` ra như hình là ok.
+<img width="663" height="72" alt="check docker no sudo" src="https://github.com/user-attachments/assets/22912b92-4799-4c3d-89e5-4ad4b216f8e6" />
+
 Tìm hiểu tập lệnh của docker và docker compose
-Đảm bảo tường lửa trên Ubuntu đã cho phép các cổng 80, 1880, 9630 (Lệnh: sudo ufw allow ...)
+<img width="676" height="383" alt="lenh docker 1" src="https://github.com/user-attachments/assets/02337cee-1daf-4cf4-8ded-eca309ba7ede" />
+
+Đảm bảo tường lửa trên Ubuntu đã cho phép các cổng 80, 1880, 9630 (Lệnh: `sudo ufw allow ...`)
+<img width="672" height="192" alt="lenh docker 2" src="https://github.com/user-attachments/assets/b63ad02c-1d35-4dd5-b801-14c3f74ed1fd" />
+
