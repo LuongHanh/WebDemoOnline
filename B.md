@@ -120,6 +120,7 @@ Các lệnh cần tìm hiểu:
     + rm: Xóa tập tin (rm file.txt).
     + rmdir: Xóa thư mục rỗng.
     + rm -rf: Xóa thư mục và toàn bộ nội dung bên trong (cẩn thận khi sử dụng).
+    + pwd: Hiển thị đường dẫn đầy đủ của thư mục hiện tại.
 ## Cài đặt docker cho Ubuntu
 Trước hết install docker.io (-y là auto yes), chạy lần lượt:
 ```
