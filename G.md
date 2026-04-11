@@ -2,16 +2,19 @@
 ## Trong Cloudflare: Tạo tunnel (đường hầm), chọn loại triển khai cho docker
 
 Có 2 cách tạo và kết nối tunnel:
+Trước hết cần cài cloudflared:
+<img width="672" height="385" alt="install cloudflare ubuntu" src="https://github.com/user-attachments/assets/f02a48d9-a26e-47f0-b395-0eea8ffaf229" />
 
 **Cách 1: Local-managed (đã dùng cho tunnel: mytunnel).**
-
-*Chi tiết đã có trong phần C: *
 
 Cách này cấu hình 100% bằng dòng lệnh, khá phức tạp vì cần config.yml và file (tunnelID).json, file cert.pem.
 
 Bước 1: Login Cloudflare `cloudflared tunnel login`
 
-mở trình duyệt → login → tải file cert.pem:
+Trên windows mở trình duyệt → login → tải file cert.pem:
+
+Sau đó copy file từ Windows sang Ubuntu:
+<img width="960" height="446" alt="tải cem" src="https://github.com/user-attachments/assets/dd912d3d-4ffc-4ad7-8fe6-7e9fec7f733d" />
 
 ~/.cloudflared/cert.pem
 
@@ -33,6 +36,7 @@ ingress:
 ```
 
 Bước 4: Route DNS `cloudflared tunnel route dns mytunnel api.firstmydm.io.vn`
+<img width="667" height="322" alt="create tunnel" src="https://github.com/user-attachments/assets/95b46ff3-9aed-43d5-8eb5-6f65f73b2042" />
 
 Bước 5: Test tunnel `cloudflared tunnel run mytunnel`
 
