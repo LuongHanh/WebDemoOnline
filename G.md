@@ -132,19 +132,23 @@ http {
 Như vậy, trước đó là dùng Local-managed để tạo và chạy tunnel, nhưng đến phần này em lại chuyển đổi sang dùng Remote-managed. Vậy là đã thu hoạch được 2 cách easy==>pro.
 
 ## Convert lệnh docker run ... sang dạng docker compose
-## Khai báo kết quả convert vào trong file docker-compose.yml
-## Chạy lại docker compose
-## Public ứng dụng bằng cách thêm 1 router trỏ tới container đang chạy trong docker, dữ liệu sẽ đi qua tunnel, url dạng sub-domain
-## Kiểm tra url sub-domain đã hoạt động public cho mọi end-user
-Cấu trúc thư mục:
+<img width="1909" height="262" alt="image" src="https://github.com/user-attachments/assets/88ebd8e2-23fb-4a26-913c-111b2ea6496e" />
+```
+cloudflared:
+    image: cloudflare/cloudflared
+    container_name: cloudflared
+    command: tunnel --no-autoupdate run --token eyJhIjoiNTI0YmRjMzY2YjgzZTg3N2RkMWIxM2MyMGJiNmY1YmIiLCJ0IjoiYWU5NzU2MjktZmEyNi00ZWRmLTkxMjAtNmNhODlkOGVkOWUwIiwicyI6Ill6ZzBZekU1T1RVdFpXUXlOaTAwTnpjM0xUZ3pZVFV0WWpJNVlqWXpORGsxWmpnNSJ9
+    restart: always
+    volumes:
+      - ./cloudflared:/etc/cloudflared
+    depends_on:
+      - nginx
+```
 
-  myapp/
-  ├── docker-compose.yml
-  ├── nginx/
-  │   └── nginx.conf
-  ├── myweb/
-  │   └── index.html
-  └── nodered/ (sẽ tự sinh dữ liệu)
-  │   └── (có nhiều file tự sinh)
-  │   └── settings.js (file này cần edit để bắt nodered login)
+## Chạy lại docker compose
+<img width="1901" height="316" alt="image" src="https://github.com/user-attachments/assets/a70b3752-86d2-4d66-8883-ea4272259edb" />
+
+## Kiểm tra url sub-domain đã hoạt động public cho mọi end-user
+<img width="2560" height="1920" alt="image" src="https://github.com/user-attachments/assets/78e8e930-00db-41b4-85b7-e0a5b226a8e9" />
+
 
