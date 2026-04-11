@@ -22,3 +22,6 @@ https://github.com/LuongHanh/WebDemoOnline/blob/main/F.md
 
 **G. Triển khai ứng dụng đến End-user:**
 https://github.com/LuongHanh/WebDemoOnline/blob/main/G.md
+
+**G. Câu hỏi về bài làm?**
+https://github.com/LuongHanh/WebDemoOnline/blob/main/G_answers.md
