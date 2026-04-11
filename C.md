@@ -3,7 +3,12 @@
 - Chuyển vào trong thư mục ~/myapp
 - Tạo thư mục: ./myweb
 - Tạo file ./myweb/index.html (với nội dung là thông tin cá nhân của em)
-<img width="1328" height="770" alt="image" src="https://github.com/user-attachments/assets/d8400a15-4e50-40bc-8a90-688daa9362d0" />
+
+Ở đây em copy ảnh thẻ của em từ máy windows sang Ubuntu:
+- Mở 1 CMD khác, chạy lệnh `scp "E:\DataAutoBackup\CÁ NHÂN\z6486984895169_b72b5e60bc8e232ecddb01f603af2665.jpg" admin@192.168.56.10:/home/admin/myapp/myweb/images/` (lưu ý; Vì thư mục ta lưu trên máy thật windows nên path có thể có chứa tiếng việt, hãy để path trong nháy kép như hình)
+<img width="1338" height="119" alt="image" src="https://github.com/user-attachments/assets/bddaffa4-f3cf-42f7-8df5-5a9a45e8810b" />
+
+<img width="1352" height="763" alt="image" src="https://github.com/user-attachments/assets/27237fea-ad8d-4a52-8709-f1fca5354457" />
 
 Tạo file docker-compose.yml để nó sẽ có các dịch vụ sau:
 - Khai báo sử dụng nodered/node-red, cổng 1880, dữ liệu nằm tại thư mục ./nodered
@@ -77,5 +82,10 @@ Nó sẽ hỏi password, nhập password bạn muốn (lưu ý: nó không hiệ
 Sau đó copy paste hash-pw đó vào setting.js, nên chú thích bên cạnh để không quên
 <img width="1339" height="773" alt="image" src="https://github.com/user-attachments/assets/595e4f5e-308d-4126-b54b-3a114d508849" />
 
+<img width="1919" height="838" alt="image" src="https://github.com/user-attachments/assets/29a868ad-a5d5-402f-9728-ca6ace2943d3" />
 
 
+**Sau khi xong hết phần C ta được kết quả**
+<img width="1919" height="786" alt="image" src="https://github.com/user-attachments/assets/524a1348-e71b-4f94-98cd-b7c1abb93a7f" />
+
+<img width="1919" height="829" alt="image" src="https://github.com/user-attachments/assets/906e10f1-549e-4127-892d-f1304c7e46d8" />
