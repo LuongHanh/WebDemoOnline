@@ -131,6 +131,9 @@ http {
 
 Như vậy, trước đó là dùng Local-managed để tạo và chạy tunnel, nhưng đến phần này em lại chuyển đổi sang dùng Remote-managed. Vậy là đã thu hoạch được 2 cách easy==>pro.
 
+Sau khi chuyển đổi thì là ngon luôn, mytunnel down còn first-my-tunnel up
+<img width="1919" height="802" alt="image" src="https://github.com/user-attachments/assets/23ce621c-812f-4994-801f-b8799b4bbc82" />
+
 ## Convert lệnh docker run ... sang dạng docker compose
 <img width="1909" height="262" alt="image" src="https://github.com/user-attachments/assets/88ebd8e2-23fb-4a26-913c-111b2ea6496e" />
 ```
