@@ -1,5 +1,5 @@
 # G. Triển khai ứng dụng đến End-user
-## Trong Cloudflare: Tạo tunnel (đường hầm), chọn loại triển khai cho docker
+## Tạo tunnel (đường hầm)
 
 Có 2 cách tạo và kết nối tunnel:
 Trước hết cần cài cloudflared:
