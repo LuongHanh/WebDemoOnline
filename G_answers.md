@@ -225,6 +225,6 @@ networks:
 ## Tìm cách đưa Cloudflare Token vào trong file .env rồi sau đó thêm .env vào file .gitignore trước khi push code lên github. Tại sao nói đây là điều quan trọng về bảo mật mã nguồn?
 Các dev khi xây dựng 1 project thì sẽ phải cần tới biến môi trường, các biến này nằm trong file .env (enviroment), các biến này là các thông tin quan trọng, tuyệt mật cho project. Ở đây Cloudflare Token chính là các mà chứ tất cả thông tin cấu hình về tunnel, một khi thông tin này lộ ra hacker có thể khai thác và chiếm quyền truy cập tunnel này, các dữ liệu đi quan tunnel sẽ gặp nguy hiểm. Hoặc là đánh cắp dữ liệu, hoặc là đánh sập server. Vì vậy không push file .env lên github vì github là kho lưu trữ mã nguồn mở, và github cũng có cảnh bảo và ngăn chặn việc dev push file .env.
 ## Tại sao chúng ta nên thêm hậu tố :ro khi mount file cấu hình Nginx?
-Ồ cái này trong docker-compose.yml của tao đang thiếu; Nó cũng là 1 phương án bảo mật; Việc này chỉ cho phép user đọc (read only) các file :ro ; Điều này sẽ bảo vệ được mã nguồn không bị chỉnh sửa.
+Nó cũng là 1 phương án bảo mật; Việc này chỉ cho phép user đọc (read only) các file :ro ; Điều này sẽ bảo vệ được mã nguồn không bị chỉnh sửa.
 ## Khi dùng Cloudflare Tunnel: có cần thiết phải mở cổng cho các service nữa không?
 Không cần thiết; Vì tunnel đi qua nginx, chỉ cần mở cổng ra cho nginx là ok, nginx sẽ tự proxy pass sang các dịch vụ khác. Ở đây là proxy pass sang nodered (backend)
